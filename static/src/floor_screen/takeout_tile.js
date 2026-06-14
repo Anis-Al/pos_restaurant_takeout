@@ -1,0 +1,31 @@
+/** @odoo-module **/
+import { Component } from "@odoo/owl";
+
+export class TakeoutTile extends Component {
+    static template = "pos_restaurant_takeout.TakeoutTile";
+    static props = {
+        order: { type: Object },
+        onOpen: { type: Function },
+        onDelete: { type: Function },
+    };
+
+    get label() {
+        return this.props.order.name || "Takeout";
+    }
+
+    get itemCount() {
+        return (this.props.order.orderlines || []).reduce(
+            (sum, line) => sum + line.quantity,
+            0
+        );
+    }
+
+    onTileClick() {
+        this.props.onOpen(this.props.order);
+    }
+
+    onDeleteClick(ev) {
+        ev.stopPropagation();
+        this.props.onDelete(this.props.order);
+    }
+}

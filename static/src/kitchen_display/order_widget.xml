@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pos_restaurant_takeout.KdsOrderWidget"
+       t-inherit="pos_preparation_display.Order"
+       t-inherit-mode="extension">
+
+        <!-- Inject TAKEOUT badge before the card header -->
+        <xpath expr="//div[hasclass('o_pdis_order_card_header_top')]" position="before">
+            <div t-if="isTakeout" class="o-kds-takeout-badge">
+                <i class="fa fa-shopping-bag"/>
+                TAKEOUT
+            </div>
+        </xpath>
+
+    </t>
+
+</templates>

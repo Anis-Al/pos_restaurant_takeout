@@ -1,0 +1,20 @@
+.o-kds-takeout-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f97316;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-bottom: 8px;
+}
+
+// Orange left border on any card that contains a takeout badge
+// :has() supported in Chrome 105+, Firefox 121+, Safari 15.4+
+.o_pdis_order_card:has(.o-kds-takeout-badge) {
+    border-left: 5px solid #f97316 !important;
+}

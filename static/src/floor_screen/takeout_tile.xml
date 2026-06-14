@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pos_restaurant_takeout.TakeoutTile">
+        <div class="o-takeout-tile" t-on-click="onTileClick">
+            <div class="o-takeout-tile-icon">
+                <i class="fa fa-shopping-bag"/>
+            </div>
+            <div class="o-takeout-tile-body">
+                <div class="o-takeout-tile-name" t-esc="label"/>
+                <div class="o-takeout-tile-count">
+                    <t t-esc="itemCount"/> item(s)
+                </div>
+            </div>
+            <button class="o-takeout-tile-delete" t-on-click="onDeleteClick" title="Delete order">
+                <i class="fa fa-times"/>
+            </button>
+        </div>
+    </t>
+</templates>

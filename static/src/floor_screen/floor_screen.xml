@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="pos_restaurant_takeout.FloorScreen"
+       t-inherit="pos_restaurant.FloorScreen"
+       t-inherit-mode="extension">
+
+        <!-- Takeout button after the "Add Floor" button in the floor selector bar -->
+        <xpath expr="//button[hasclass('button-add')]" position="after">
+            <button class="o-takeout-new-btn btn p-3 ms-1 rounded-0" t-on-click="newTakeoutOrder">
+                <i class="fa fa-shopping-bag me-1"/>
+                Takeout
+            </button>
+        </xpath>
+
+        <!-- Takeout orders strip below the floor map -->
+        <xpath expr="//div[hasclass('floor-map')]" position="after">
+            <div class="o-takeout-strip" t-if="takeoutOrders.length > 0">
+                <div class="o-takeout-strip-label">
+                    <i class="fa fa-shopping-bag me-1"/>
+                    Takeout Orders
+                </div>
+                <div class="o-takeout-tiles">
+                    <t t-foreach="takeoutOrders" t-as="order" t-key="order.uid">
+                        <TakeoutTile order="order" onOpen.bind="openTakeoutOrder" onDelete.bind="deleteTakeoutOrder"/>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+
+    </t>
+
+</templates>
