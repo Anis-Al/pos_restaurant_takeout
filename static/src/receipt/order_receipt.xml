@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pos_restaurant_takeout.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        <xpath expr="//ReceiptHeader" position="after">
+            <div t-if="props.data.is_delivery" class="o-receipt-delivery-block" style="text-align: center; margin-top: 10px; border-top: 1px dashed black; padding-top: 10px;">
+                <div style="font-weight: bold; font-size: 1.2em;">── DELIVERY ──</div>
+                <div t-if="props.data.partner?.phone">Tel: <t t-esc="props.data.partner.phone"/></div>
+                <div t-if="props.data.partner?.street"><t t-esc="props.data.partner.street"/></div>
+                <div>Driver: <t t-esc="props.data.driver_name || 'TBD'"/></div>
+            </div>
+            <div t-elif="props.data.is_takeout" style="text-align: center; margin-top: 10px; border-top: 1px dashed black; padding-top: 10px;">
+                <div style="font-weight: bold; font-size: 1.2em;">── TAKEOUT ──</div>
+            </div>
+        </xpath>
+    </t>
+</templates>

@@ -6,4 +6,10 @@ patch(Order.prototype, {
     get isTakeout() {
         return !!this.props.order?.is_takeout;
     },
+    get isDelivery() {
+        return !!this.props.order?.is_delivery;
+    },
+    get driverName() {
+        return this.props.order?.driver_name || 'Unassigned';
+    },
 });

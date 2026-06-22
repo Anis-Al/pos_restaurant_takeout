@@ -6,14 +6,66 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e-20251013\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-14 12:48+0000\n"
-"PO-Revision-Date: 2026-06-14 12:48+0000\n"
+"POT-Creation-Date: 2026-06-22 09:33+0000\n"
+"PO-Revision-Date: 2026-06-22 09:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Address:"
+msgstr "Adresse :"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Assign Driver"
+msgstr "Assigner un livreur"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: pos_restaurant_takeout
+#: model:ir.model,name:pos_restaurant_takeout.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: pos_restaurant_takeout
+#: model_terms:ir.actions.act_window,help:pos_restaurant_takeout.action_pos_delivery_driver
+msgid "Create a new delivery driver"
+msgstr "Créer un nouveau livreur"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Customer:"
+msgstr "Client :"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/kitchen_display/order_widget.xml:0
+#, python-format
+msgid "DELIVERY —"
+msgstr "LIVRAISON —"
 
 #. module: pos_restaurant_takeout
 #. odoo-javascript
@@ -27,7 +79,7 @@ msgstr "Supprimer"
 #: code:addons/pos_restaurant_takeout/static/src/floor_screen/floor_screen.js:0
 #, python-format
 msgid "Delete '%s'? This cannot be undone."
-msgstr "Supprimer '%s' ? Cette action ne peut pas etre annulée."
+msgstr "Supprimer '%s' ? Cette action ne peut pas être annulée."
 
 #. module: pos_restaurant_takeout
 #. odoo-javascript
@@ -44,16 +96,92 @@ msgid "Delete order"
 msgstr "Supprimer la commande"
 
 #. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/order_screen/product_screen.xml:0
+#: model:ir.model.fields,field_description:pos_restaurant_takeout.field_pos_order__is_delivery
+#, python-format
+msgid "Delivery"
+msgstr "Livraison"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Delivery Details"
+msgstr "Détails de la livraison"
+
+#. module: pos_restaurant_takeout
+#: model:ir.model.fields,field_description:pos_restaurant_takeout.field_res_partner__is_delivery_driver
+#: model:ir.model.fields,field_description:pos_restaurant_takeout.field_res_users__is_delivery_driver
+#: model_terms:ir.ui.view,arch_db:pos_restaurant_takeout.view_partner_form_delivery_driver
+msgid "Delivery Driver"
+msgstr "Livreur"
+
+#. module: pos_restaurant_takeout
+#: model:ir.actions.act_window,name:pos_restaurant_takeout.action_pos_delivery_driver
+#: model_terms:ir.ui.view,arch_db:pos_restaurant_takeout.view_partner_tree_delivery_driver
+msgid "Delivery Drivers"
+msgstr "Livreurs"
+
+#. module: pos_restaurant_takeout
+#: model:ir.model.fields,field_description:pos_restaurant_takeout.field_pos_order__driver_id
+msgid "Driver"
+msgstr "Livreur"
+
+#. module: pos_restaurant_takeout
+#: model_terms:ir.ui.view,arch_db:pos_restaurant_takeout.view_partner_form_delivery_driver
+msgid "Driver name..."
+msgstr "Nom du livreur..."
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/receipt/order_receipt.xml:0
+#, python-format
+msgid "Driver:"
+msgstr "Livreur :"
+
+#. module: pos_restaurant_takeout
+#: model:ir.ui.menu,name:pos_restaurant_takeout.menu_pos_delivery_driver
+msgid "Drivers"
+msgstr "Livreurs"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "No drivers found."
+msgstr "Aucun livreur trouvé."
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Phone:"
+msgstr "Téléphone :"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/delivery/delivery_popup.xml:0
+#, python-format
+msgid "Please set customer first."
+msgstr "Veuillez d'abord définir un client."
+
+#. module: pos_restaurant_takeout
 #: model:ir.model,name:pos_restaurant_takeout.model_pos_order
 msgid "Point of Sale Orders"
 msgstr "Commandes du point de vente"
+
+#. module: pos_restaurant_takeout
+#: model:ir.model,name:pos_restaurant_takeout.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Session du point de vente"
 
 #. module: pos_restaurant_takeout
 #. odoo-javascript
 #: code:addons/pos_restaurant_takeout/static/src/kitchen_display/order_widget.xml:0
 #, python-format
 msgid "TAKEOUT"
-msgstr "À emporter"
+msgstr "À EMPORTER"
 
 #. module: pos_restaurant_takeout
 #. odoo-javascript
@@ -72,7 +200,28 @@ msgstr "Commandes à emporter"
 
 #. module: pos_restaurant_takeout
 #. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/receipt/order_receipt.xml:0
+#, python-format
+msgid "Tel:"
+msgstr "Tél :"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
 #: code:addons/pos_restaurant_takeout/static/src/floor_screen/takeout_tile.xml:0
 #, python-format
 msgid "item(s)"
-msgstr "élément(s)"
+msgstr "article(s)"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/receipt/order_receipt.xml:0
+#, python-format
+msgid "── DELIVERY ──"
+msgstr "── LIVRAISON ──"
+
+#. module: pos_restaurant_takeout
+#. odoo-javascript
+#: code:addons/pos_restaurant_takeout/static/src/receipt/order_receipt.xml:0
+#, python-format
+msgid "── TAKEOUT ──"
+msgstr "── À EMPORTER ──"

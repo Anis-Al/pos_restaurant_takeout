@@ -9,6 +9,16 @@ export class TakeoutTile extends Component {
         onDelete: { type: Function },
     };
 
+    get isTakeout() {
+        return this.props.order.is_takeout;
+    }
+    get isDelivery() {
+        return this.props.order.is_delivery;
+    }
+    get driverName() {
+        return this.props.order.driver_name || 'Unassigned';
+    }
+
     get label() {
         return this.props.order.name || "Takeout";
     }

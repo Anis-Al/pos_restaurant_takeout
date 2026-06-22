@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pos_restaurant_takeout.DeliveryPopup">
+        <div class="o-delivery-popup popup">
+            <div class="modal-header">
+                <h4 class="modal-title">Delivery Details</h4>
+            </div>
+            <div class="modal-body overflow-auto">
+                
+                <div class="o-delivery-customer mb-3 p-2 bg-light border rounded" t-if="props.order.partner">
+                    <div><strong>Customer:</strong> <t t-esc="props.order.partner.name"/></div>
+                    <div t-if="props.order.partner.phone"><strong>Phone:</strong> <t t-esc="props.order.partner.phone"/></div>
+                    <div t-if="props.order.partner.street"><strong>Address:</strong> <t t-esc="props.order.partner.street"/></div>
+                </div>
+                <div class="alert alert-warning" t-else="">
+                    <i class="fa fa-warning me-1"/> Please set customer first.
+                </div>
+
+                <div class="o-delivery-drivers" t-if="state.is_delivery">
+                    <h6 class="mb-2">Assign Driver</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button t-foreach="props.drivers" t-as="d" t-key="d.id" 
+                                t-attf-class="btn btn-outline-primary {{state.driver_id === d.id ? 'active' : ''}}" 
+                                t-on-click="()=>this.selectDriver(d.id)">
+                            <i class="fa fa-user me-1"/> <t t-esc="d.name"/>
+                        </button>
+                        <div t-if="!props.drivers.length" class="text-muted italic">No drivers found.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer modal-footer mt-3">
+                <button class="btn btn-secondary" t-on-click="cancel">Cancel</button>
+                <button class="btn btn-primary" t-on-click="confirm">Confirm</button>
+            </div>
+        </div>
+    </t>
+</templates>

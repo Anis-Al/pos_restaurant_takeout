@@ -7,9 +7,11 @@
 
         <!-- Inject TAKEOUT badge before the card header -->
         <xpath expr="//div[hasclass('o_pdis_order_card_header_top')]" position="before">
-            <div t-if="isTakeout" class="o-kds-takeout-badge">
-                <i class="fa fa-shopping-bag"/>
-                TAKEOUT
+            <div t-if="isDelivery" class="o-kds-delivery-badge">
+                <i class="fa fa-motorcycle me-1"/> DELIVERY — <t t-esc="driverName"/>
+            </div>
+            <div t-elif="isTakeout" class="o-kds-takeout-badge">
+                <i class="fa fa-shopping-bag me-1"/> TAKEOUT
             </div>
         </xpath>
 

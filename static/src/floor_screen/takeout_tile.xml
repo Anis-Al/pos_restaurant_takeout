@@ -3,10 +3,13 @@
     <t t-name="pos_restaurant_takeout.TakeoutTile">
         <div class="o-takeout-tile" t-on-click="onTileClick">
             <div class="o-takeout-tile-icon">
-                <i class="fa fa-shopping-bag"/>
+                <i t-attf-class="fa {{ isDelivery ? 'fa-motorcycle' : 'fa-shopping-bag' }}"/>
             </div>
             <div class="o-takeout-tile-body">
                 <div class="o-takeout-tile-name" t-esc="label"/>
+                <div t-if="isDelivery" class="o-takeout-tile-driver">
+                    <i class="fa fa-user me-1"/> <t t-esc="driverName"/>
+                </div>
                 <div class="o-takeout-tile-count">
                     <t t-esc="itemCount"/> item(s)
                 </div>
